@@ -9,11 +9,19 @@ Environment repositories using the framework:
 * **`MuJoCo Playground`** (built on top of MuJoCo MJX and Warp): https://github.com/google-deepmind/mujoco_playground/
 * **`mjlab`** (built on top of MuJoCo Warp): https://github.com/mujocolab/mjlab
 
-The library currently supports **PPO** and **Student-Teacher Distillation** with additional features from our research. These include:
+The library currently supports **PPO**, **DAgger**, and **Student-Teacher Distillation** with additional features from our research. These include:
 
 * [Random Network Distillation (RND)](https://proceedings.mlr.press/v229/schwarke23a.html) - Encourages exploration by adding
   a curiosity driven intrinsic reward.
 * [Symmetry-based Augmentation](https://arxiv.org/abs/2403.04359) - Makes the learned behaviors more symmetrical.
+
+### Custom Modifications (v3.0.1 Fork)
+
+This fork includes the following modifications:
+
+* **DAgger Algorithm** - Added Dataset Aggregation (DAgger) implementation for imitation learning, including dedicated runner and training utilities.
+* **Streamlined Modules** - Removed CNN-related modules (`actor_critic_cnn.py`, `cnn.py`) to focus on core MLP-based architectures.
+* **Simplified Logging** - Removed standalone logger utility in favor of integrated logging through existing frameworks (Tensorboard, W&B, Neptune).
 
 We welcome contributions from the community. Please check our contribution guidelines for more
 information.

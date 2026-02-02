@@ -1,11 +1,12 @@
-# Copyright (c) 2021-2026, ETH Zurich and NVIDIA CORPORATION
+# Copyright (c) 2021-2025, ETH Zurich and NVIDIA CORPORATION
 # All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-"""Implementation of different learning algorithms."""
+"""Implementation of different RL agents."""
 
 from .distillation import Distillation
 from .ppo import PPO
+from .dagger import DAgger
 
-__all__ = ["PPO", "Distillation"]
+__all__ = ["PPO", "Distillation", "DAgger"]
